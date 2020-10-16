@@ -1,0 +1,99 @@
+.App-logo {
+  padding-top: 15vh;
+  pointer-events: none;
+}
+
+.circles {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  .circle {
+    width: 50%;
+    &.left {
+      text-align: left;
+      padding-top: 30px;
+      img {
+        margin-left: -150px;
+      }
+    }
+    &.right {
+      text-align: right;
+      padding-top: 50px;
+      img {
+        margin-right: -150px;
+      }
+      
+    }
+  }
+}
+
+.welcome-title {
+  font-family: 'Poppins-Regular';
+  color: #5C3E3C;
+  padding: 8% 0 5%;
+  p {
+    margin: 0;
+  }
+  .welcome {
+    font-size: 55px;
+    .app-name {
+      font-family: 'Poppins-Bold';
+    }
+  }
+  .sub-welcome {
+    font-size: 30px;
+  }
+}
+
+.home_start {
+  .btn.start {
+    border: none;
+    outline:none;
+    background: rgba(0, 0, 0, 0);
+    position: relative;
+    &:hover {
+      cursor: pointer;
+    }
+    img {
+      width: 195px;
+    }
+    .btn.title {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: -10px;
+      font-size: 20px;
+      font-family: 'Poppins-Bold';
+      color: white;
+      padding: 14px 0 0;
+    }
+  }
+}
+
+.bottoms {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  .bottom {
+    display: flex;
+    width: 50%;
+    &.left {
+      justify-content: flex-start;
+      text-align: left;
+      img {
+        margin-left: -480px;
+      }
+    }
+    &.right {
+      justify-content: flex-end;
+      text-align: right;
+      img {
+        margin-right: -500px;
+      }
+      
+    }
+  }
+}

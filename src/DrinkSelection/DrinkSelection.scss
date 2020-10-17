@@ -1,0 +1,162 @@
+label {
+    pointer-events: none;
+}
+
+p {
+    margin: 0;
+}
+
+.DrinkSelection {
+    max-width: 1024px;
+    margin: auto;
+    padding-left: 80px;
+    @media (max-width: 870px) {
+        padding: 0 80px 0 80px;
+    }
+    @media (max-width: 600px) {
+        padding: 0 10% 0 10%;
+    }
+    .service_title {
+        p {
+            color: #5C3E3C;
+            text-align: left;
+            margin: 0;
+            &.main_title {
+                font-family: 'Poppins-Bold';
+                font-size: 32px;
+                @media (max-width: 798px) {
+                    font-size: 25px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 20px;
+                }
+                padding-top: 17vh;
+            }
+            &.sub_title {
+                font-family: 'Poppins-Medium';
+                font-size: 24px;
+                @media (max-width: 798px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 15px;
+                }
+            }
+            span {
+                color: #F27A2D;
+            }
+        }
+    }
+    .drink_type {
+        display: flex;
+        padding-top: 100px;
+        .drink {
+            width: 30%;
+            padding-right: 41px;
+            .select {
+                width: 250px;
+                height: 98px;
+                background:#ffffff;
+                margin: auto;
+                border-radius: 10px;
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font-size: 32px;
+                    font-family: 'Poppins-Bold';
+                    color: #707070;
+                    text-align: center;
+                    line-height: 1;
+                }
+            }
+            .description {
+                font-size: 10px;
+                &.underline {
+                    font-size: 12px;
+                }
+                font-family: 'Poppins-Bold';
+                color: #897372;
+                text-align: center;
+                position: relative;
+                padding-top: 19px;
+                
+                &.underline:after {
+                    content: "";
+                    position: absolute;
+                    background-color: #5C3E3C;
+                    width: 28px;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    top: 50px;
+                    margin: auto;
+                }
+            }
+            .type_image {
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                width: 30%;
+                height: 107px;
+                margin: auto;
+                padding-bottom: 25.7px;
+            }
+            &.first {
+                .type_image {
+                    img {
+                        width: 89.38px;
+                    }
+                }
+            }
+            &.second {
+                .type_image {
+                    img {
+                        width: 92.63px;
+                    }
+                }
+            }
+            &.third {
+                .type_image {
+                    img {
+                        width: 75px;
+                    }
+                }
+            }
+        }
+    }
+    .backnextbtn {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 75px;
+        padding-right: 50px;
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                height: 60px;
+            }
+            p {
+                font-size: 24px;
+                font-family: 'Poppins-Medium';
+                position: absolute;
+            }
+            &.backbutton {
+                padding-right: 13px;
+                p {
+                    color: #F27A2D;
+                }
+            }
+            &.nextbutton {
+                padding-right: 13px;
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,275 @@
+label {
+    pointer-events: none;
+}
+
+.PersonalInfo {
+    max-width: 1024px;
+    margin: auto;
+    padding-left: 80px;
+    @media (max-width: 870px) {
+        padding: 0 80px 0 80px;
+    }
+    @media (max-width: 600px) {
+        padding: 0 10% 0 10%;
+    }
+    .service_title {
+        p {
+            color: #5C3E3C;
+            text-align: left;
+            margin: 0;
+            &.main_title {
+                font-family: 'Poppins-Bold';
+                font-size: 32px;
+                @media (max-width: 798px) {
+                    font-size: 25px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 20px;
+                }
+                padding-top: 17vh;
+            }
+            &.sub_title {
+                font-family: 'Poppins-Medium';
+                font-size: 24px;
+                @media (max-width: 798px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 15px;
+                }
+            }
+            span {
+                color: #F27A2D;
+            }
+        }
+    }
+}
+
+.user_info {
+    display: flex;
+    @media (max-width: 798px) {
+        display: block;
+    }
+    .user_name, .user_email {
+        padding: 35px 0 0 0;
+        width: 50%;
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+        label {
+            font-size: 20px;
+            @media (max-width: 600px) {
+                font-size: 15px;
+            }
+            font-family: 'Poppins-Regular';
+            color: #707070;
+        }
+        div {
+            padding-top: 9px;
+            .input_name, .input_email {
+                background-color: #f4f4f4;
+                border: none;
+                width: 300px;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+                height: 56px;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+.other_way {
+    padding: 28px 332px 0 0;
+    @media (max-width: 870px) {
+        padding: 28px 0 0 0;
+    }
+    .other_way_text {
+        font-size: 16px;
+        font-family: 'Poppins-SemiBold';
+        color: #7D8588;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+    .btn_way {
+        @media (max-width: 450px) {
+            display: block;
+        }
+        button {
+            font-family: 'Poppins-SemiBold';
+            font-weight: bold;
+            font-size: 20px;
+            width: 50%;
+            @media (max-width: 450px) {
+                width: 100%;
+            }
+            height: 56px;
+            outline: none;
+            @media (max-width: 630px) {
+                font-size: 18px;
+            }
+            @media (max-width: 550px) {
+                font-size: 15px;
+            }
+        }
+        .btn_prod {
+            background-color: #5c3e3c;
+            border: none;
+            color: #ffffff;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            @media (max-width: 450px) {
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 5px;
+            }
+        }
+        .btn_access {
+            background-color: white;
+            border-color: #5c3e3c;
+            border-width: 1px;
+            color: #707070;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            @media (max-width: 450px) {
+                border-top-right-radius: 0px;
+                border-bottom-left-radius: 5px;
+            }
+        }
+    }
+    .card_no_title {
+        font-size: 20px;
+        @media (max-width: 450px) {
+            font-size: 15px;
+        }
+        font-family: 'Poppins-Regular';
+        color: #707070;
+        margin: 0;
+        padding: 50px 0 6px 0;
+    }
+    
+    .card_no {
+        display: flex;
+        @media (max-width: 600px) {
+            display: block;
+        }
+        width: 100%;
+        align-items: center;
+        .input_card_no {
+            background-color: #f4f4f4;
+            border: none;
+            width: 300px;
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+            height: 56px;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        &>div {
+            display: flex;
+            width: 100%;
+            @media (max-width: 600px) {
+                padding-top: 15px;
+            }
+            .description {
+                display: flex;
+                align-items: center;
+                font-size: 10px;
+                font-family: 'Poppins-SemiBold';
+                color: #897372;
+                padding-left: 15px;
+            }
+            img {
+                width: 42px;
+                height: 35px;
+                padding-left: 15px;
+            }
+        }
+        
+    }
+}
+
+.checkbox {
+    padding: 60px 50px 0 0;
+    display: flex;
+    @media (max-width: 798px) {
+        display: block;
+        padding: 60px 0 0 0;
+    }
+    .btn_checkbox {
+        width: 30px;
+        height:30px;
+        cursor: pointer;
+    }
+    .terms {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        @media (max-width: 798px) {
+            width: 100%;
+        }
+        .read_terms {
+            display: inline-block;
+            margin-left :10px;
+            vertical-align:super;
+            color:#7D8588;
+            font-size: 14px;
+            font-family: 'Poppins-Regular';
+            span {
+                font-family: 'Poppins-SemiBold';
+            }
+        }
+    }
+    .nextbackbtnpos {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: 798px) {
+            padding: 30px 0 30px 0;
+            width: 100%;
+            justify-content: center;
+        }
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                height: 60px;
+                @media (max-width: 600px) {
+                    height: 50px;
+                }
+                @media (max-width: 450px) {
+                    height: 40px;
+                }
+            }
+            p {
+                font-size: 24px;
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 18px;
+                }
+                font-family: 'Poppins-Medium';
+                position: absolute;
+            }
+            &.backbutton {
+                padding-right: 13px;
+                p {
+                    color: #F27A2D;
+                }
+            }
+            &.nextbutton {
+                padding-right: 13px;
+                p {
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

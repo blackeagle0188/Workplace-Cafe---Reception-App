@@ -8,6 +8,16 @@
   src: local('Poppins-Bold'), url(./fonts/Poppins-Bold.woff) format('woff');
 }
 
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: local('Poppins-Medium'), url(./fonts/Poppins-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: local('Poppins-SemiBold'), url(./fonts/Poppins-SemiBold.woff) format('woff');
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

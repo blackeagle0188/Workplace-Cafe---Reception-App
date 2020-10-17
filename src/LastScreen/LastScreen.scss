@@ -1,0 +1,52 @@
+label {
+    pointer-events: none;
+}
+
+p {
+    margin: 0;
+}
+
+.LastScreen {
+    background-color: #5C3E3C;
+    height: 100vh;
+    .conculsion{
+        text-align: center;
+        color: #ffffff;
+        padding-top: 30vh;
+        padding-bottom: 160px;
+        .header {
+            font-size: 24px;
+            font-family: 'Poppins-Regular';
+            padding-bottom: 25px;
+        }
+        .title {
+            font-size: 48px;
+            font-family: 'Poppins-Bold';
+            line-height: 1.3;
+            padding-bottom: 16px;
+        }
+        .sub_title {
+            font-size: 24px;
+            font-family: 'Poppins-Regular';
+        }
+    }
+    .backnextbtn {
+        display: flex;
+        justify-content: center;
+        .backbutton {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                height: 60px;
+            }
+            p {
+                font-size: 20px;
+                font-family: 'Poppins-Regular';
+                color: #ffffff;
+                position: absolute;
+            }
+        }
+    }
+}

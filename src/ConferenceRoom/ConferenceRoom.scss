@@ -1,0 +1,137 @@
+label {
+    pointer-events: none;
+}
+
+p {
+    margin: 0;
+}
+
+.conference_room {
+    max-width: 1024px;
+    margin: auto;
+    padding-left: 80px;
+    @media (max-width: 870px) {
+        padding: 0 80px 0 80px;
+    }
+    @media (max-width: 600px) {
+        padding: 0 10% 0 10%;
+    }
+    .service_title {
+        p {
+            color: #5C3E3C;
+            text-align: left;
+            margin: 0;
+            &.main_title {
+                font-family: 'Poppins-Bold';
+                font-size: 32px;
+                @media (max-width: 798px) {
+                    font-size: 25px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 20px;
+                }
+                padding-top: 17vh;
+            }
+            &.sub_title {
+                font-family: 'Poppins-Medium';
+                font-size: 24px;
+                @media (max-width: 798px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 15px;
+                }
+            }
+            span {
+                color: #F27A2D;
+            }
+        }
+    }
+    .plans {
+        display: flex;
+        padding: 100px 80px 0 0;
+        .plan {
+            position: relative;
+            width: 280px;
+            height: 250px;
+            background-color: white;
+            border-radius: 11px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            margin-right: 32px;
+            .price {
+                width: 125px;
+                height: 35px;
+                background: #5C3E3C;
+                border-radius: 20px;
+                position: absolute;
+                top: -15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                right: 0;
+                left: 0;
+                margin: auto;
+                p {
+                    font-size: 16px;
+                    font-family: 'Poppins-Medium';
+                    color: #ffffff;
+                }
+            }
+            .room_description {
+                font-size: 24px;
+                font-family: 'Poppins-Medium';
+                color: #5C3E3C;
+                text-align: center;
+                padding: 35px 0 10px 0;
+            }
+            .first_sub, .second_sub {
+                align-items: center;
+                display: flex;
+                padding-left: 26px;
+                .sub_price {
+                    font-size: 25px;
+                    font-family: 'Poppins-Medium';
+                    color: #707070;
+                    width: 40%;
+                }
+                .price_description {
+                    font-size: 12px;
+                    font-family: 'Poppins-SemiBold';
+                    color: #5C3E3C;
+                }
+            }
+            &.third {
+                .room_description {
+                    line-height: 3;
+                }
+            }
+        }
+    }
+    .backnextbtn {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 75px;
+        padding-right: 50px;
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            img {
+                height: 60px;
+            }
+            p {
+                font-size: 24px;
+                font-family: 'Poppins-Medium';
+                position: absolute;
+            }
+            &.backbutton {
+                padding-right: 13px;
+                p {
+                    color: #F27A2D;
+                }
+            }
+        }
+    }
+}

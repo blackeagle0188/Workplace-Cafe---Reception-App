@@ -9,12 +9,9 @@ p {
 .DrinkSelection {
     max-width: 1024px;
     margin: auto;
-    padding-left: 80px;
-    @media (max-width: 870px) {
-        padding: 0 80px 0 80px;
-    }
+    padding: 0 80px 0 80px;
     @media (max-width: 600px) {
-        padding: 0 10% 0 10%;
+        padding: 0 15% 0 15%;
     }
     .service_title {
         p {
@@ -30,7 +27,7 @@ p {
                 @media (max-width: 450px) {
                     font-size: 20px;
                 }
-                padding-top: 17vh;
+                padding-top: 6vh;
             }
             &.sub_title {
                 font-family: 'Poppins-Medium';
@@ -50,12 +47,23 @@ p {
     .drink_type {
         display: flex;
         padding-top: 100px;
+        @media (max-width: 600px) {
+            display: block;
+            padding-top: 20px;
+        }
         .drink {
             width: 30%;
+            @media (max-width: 600px) {
+                width: 100%;
+                padding-top: 20px;
+            }
             padding-right: 41px;
             .select {
                 width: 250px;
                 height: 98px;
+                @media (max-width: 600px) {
+                    height: 55px;
+                }
                 background:#ffffff;
                 margin: auto;
                 border-radius: 10px;
@@ -65,6 +73,9 @@ p {
                 justify-content: center;
                 p {
                     font-size: 32px;
+                    @media (max-width: 600px) {
+                        font-size: 18px;
+                    }
                     font-family: 'Poppins-Bold';
                     color: #707070;
                     text-align: center;
@@ -132,6 +143,11 @@ p {
         justify-content: flex-end;
         padding-top: 75px;
         padding-right: 50px;
+        @media (max-width: 600px) {
+            display: flex;
+            justify-content: center;
+            padding: 75px 0 20px 0;
+        }
         .btn {
             display: flex;
             align-items: center;
@@ -139,9 +155,21 @@ p {
             cursor: pointer;
             img {
                 height: 60px;
+                @media (max-width: 600px) {
+                    height: 50px;
+                }
+                @media (max-width: 450px) {
+                    height: 40px;
+                }
             }
             p {
                 font-size: 24px;
+                @media (max-width: 600px) {
+                    font-size: 20px;
+                }
+                @media (max-width: 450px) {
+                    font-size: 18px;
+                }
                 font-family: 'Poppins-Medium';
                 position: absolute;
             }
@@ -153,6 +181,9 @@ p {
             }
             &.nextbutton {
                 padding-right: 13px;
+                @media (max-width: 600px) {
+                    padding: 0;
+                }
                 p {
                     color: #ffffff;
                 }

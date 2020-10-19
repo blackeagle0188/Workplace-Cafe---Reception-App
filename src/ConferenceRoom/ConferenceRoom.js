@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./ConferenceRoom.scss";
+import home from './../img/home_icon.png';
 import button_back from './../img/button_back.png';
 import history from './../history';
 
@@ -7,6 +8,18 @@ class ConferenceRoom extends Component {
     render() {
         return (
             <div className="conference_room">
+                <div className="breadcrumb">
+                    <div className="node home_link" onClick={() => history.push('/')}>
+                        <img src={home} alt="Home"/>
+                        <label> Home</label>
+                    </div>
+                    <div className="node option_link" onClick={() => history.push('/home')}>
+                        <label>{'>'}Stay Options</label>
+                    </div>
+                    <div className="node personal_link current">
+                        <label>{'>'}Conference Rooms</label>
+                    </div>
+                </div>
                 <div className="service_title">
                     <p className="main_title">
                         Here are our Conference Rooms.
@@ -72,7 +85,7 @@ class ConferenceRoom extends Component {
                     </div>
                 </div>
                 <div className="backnextbtn">
-                    <div className="btn backbutton" onClick={() => history.push('/Home')}><img src={button_back} alt="Back button"/><p>Back</p></div>
+                    <div className="btn backbutton" onClick={() => history.push('/home')}><img src={button_back} alt="Back button"/><p>Back</p></div>
                 </div>
             </div>
         );

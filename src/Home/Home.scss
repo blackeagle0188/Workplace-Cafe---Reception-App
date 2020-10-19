@@ -5,11 +5,14 @@ label {
 .home {
     max-width: 1024px;
     margin: auto;
+    padding: 0 80px 0 80px;
+    @media (max-width: 600px) {
+        padding: 0 15% 0 15%;
+    }
     .service_title {
         p {
             color: #5C3E3C;
             text-align: left;
-            padding-left: 80px;
             margin: 0;
             &.main_title {
                 font-family: 'Poppins-Bold';
@@ -17,7 +20,7 @@ label {
                 @media (max-width: 600px) {
                     font-size: 25px;
                 }
-                padding-top: 17vh;
+                padding-top: 6vh;
             }
             &.sub_title {
                 font-family: 'Poppins-Medium';
@@ -31,14 +34,23 @@ label {
 }
 
 .service_list {
-    width: 75%;
+    width: 100%;
     @media (max-width: 798px) {
-        width: 90%;
         padding-top: 50px;
     }
     margin: auto;
-    display: flex;
+    display: block;
     .container {
+        display: flex;
+        padding-top: 56px;
+        @media (max-width: 798px) {
+            padding-top: 20px;
+        }
+        @media (max-width: 450px) {
+            padding-top:0;
+            display: block;
+        }
+        justify-content: center;
         .hourly, .daily, .monthly, .conference {
             cursor: pointer;
             &.entered {
@@ -48,38 +60,96 @@ label {
                     }
                 }
             }
+            @media (max-width: 450px) {
+                padding: 10px 0 10px 0;
+            }
             position: relative;
+            &.first {
+                padding-right: 56px;
+                @media (max-width: 798px) {
+                    padding-right: 20px;
+                }
+                @media (max-width: 450px) {
+                    padding-right: 0;
+                }
+            }
+            &>img {
+                box-shadow: 0 0 30px rgba(0, 0, 0, 0.13);
+                border-radius: 10px;
+                @media (max-width: 798px) {
+                    width: 100%;
+                }
+            }
             .content {
                 .hourly_text, .daily_text, .monthly_text, .conference_text {
                     font-family: 'Poppins-Bold';
                     font-size: 36px;
+                    @media (max-width: 798px) {
+                        font-size: 30px;
+                    }
+                    @media (max-width: 600px) {
+                        font-size: 25px;
+                    }
+                    @media (max-width: 450px) {
+                        font-size: 36px;
+                    }
                     color:#707070;
                     position: absolute;
-                    left: 15%;
-                    top: 18%;
+                    left: 5%;
+                    top: 7%;
                 }
                 .stay_text {
                     font-family: 'Poppins-Bold';
                     font-size: 36px;
+                    @media (max-width: 798px) {
+                        font-size: 30px;
+                    }
+                    @media (max-width: 600px) {
+                        font-size: 25px;
+                    }
+                    @media (max-width: 450px) {
+                        font-size: 36px;
+                    }
                     color:#707070;
                     position: absolute;
-                    left: 15%;
-                    top: 33%;
+                    left: 5%;
+                    top: 27%;
                 }
             }
             .stay_option {
                 width: 140px;
+                @media (max-width: 798px) {
+                    width: 100px;
+                }
+                @media (max-width: 450px) {
+                    width: 140px;
+                }
                 display: flex;
                 align-items: center;
                 top: 60%;
-                left: 15%;
+                left: 5%;
+                @media (max-width: 450px) {
+                    justify-content: center;
+                }
                 position: absolute;
                 pointer-events: none;
                 img {
                     width: 140px;
+                    @media (max-width: 798px) {
+                        width: 100px;
+                    }
+                    @media (max-width: 450px) {
+                        width: 140px;
+                    }
                 }
                 p {
                     font-size: 16px;
+                    @media (max-width: 798px) {
+                        font-size: 12px;
+                    }
+                    @media (max-width: 450px) {
+                        font-size: 16px;
+                    }
                     font-family: 'Poppins-Medium';
                     color: #ffffff;
                     position: absolute;

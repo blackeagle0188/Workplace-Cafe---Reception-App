@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +15,8 @@
     "react-hover-image": "^2.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "semantic-ui-react": "^2.0.0"
+    "semantic-ui-react": "^2.0.0",
+    "sftp-upload": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./PersonalInfo.scss";
+import home from './../img/home_icon.png';
 import card from './../img/card.png';
 import uncheckImage from './../img/uncheck.png';
 import checkImage from './../img/check.png';
@@ -51,7 +52,7 @@ class PersonalInfo extends Component {
                     card: this.state.cardNum,
                     access: this.state.access
                 };
-                history.push('/DrinkSelection', val);
+                history.push('/drinkselection', val);
             } else {
                 alert("Please read and accept terms and conditions.");
             }
@@ -83,6 +84,18 @@ class PersonalInfo extends Component {
     render() {
         return(
             <div className="PersonalInfo">
+                <div className="breadcrumb">
+                    <div className="node home_link" onClick={() => history.push('/')}>
+                        <img src={home} alt="Home"/>
+                        <label> Home</label>
+                    </div>
+                    <div className="node option_link" onClick={() => history.push('/home')}>
+                        <label>{'>'}Stay Options</label>
+                    </div>
+                    <div className="node personal_link current">
+                        <label>{'>'}Personal Info</label>
+                    </div>
+                </div>
                 <div className="service_title">
                     <p className="main_title">
                         Awesome! You chose  <span>{this.state.session} STAY</span>.
@@ -128,7 +141,7 @@ class PersonalInfo extends Component {
                         <div className="read_terms"><span>I have read and accept the <u>terms and conditions.</u></span></div>
                     </div>
                     <div className="nextbackbtnpos">
-                        <div className="btn backbutton" onClick={() => history.push('/Home')}><img src={button_back} alt="Back button"/><p>Back</p></div>
+                        <div className="btn backbutton" onClick={() => history.push('/home')}><img src={button_back} alt="Back button"/><p>Back</p></div>
                         <div className="btn nextbutton" onClick={this.handleClickNext.bind(this)}><img src={button_next} alt="Next button"/><p>Next</p></div>
                     </div>
                 </div>

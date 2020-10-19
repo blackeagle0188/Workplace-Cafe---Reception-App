@@ -29,7 +29,7 @@ const Welcome = (props) => {
         <p className="sub-welcome">Glad to be working with you.</p>
       </div>
       <div className="home_start">
-        <button className="btn start" onClick={() => history.push('/Home')}>
+        <button className="btn start" onClick={() => history.push('/home')}>
           <img src={button} alt="my image" />
           <span className="btn title">START</span>
         </button>

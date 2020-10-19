@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import "./DrinkSelection.scss";
+import home from './../img/home_icon.png';
 import coffee from './../img/coffee.png';
 import tea from './../img/tea.png';
 import other from './../img/other.png';
@@ -19,6 +20,21 @@ class DrinkSelection extends Component {
     render() {
         return (
             <div className="DrinkSelection">
+                <div className="breadcrumb">
+                    <div className="node home_link" onClick={() => history.push('/')}>
+                        <img src={home} alt="Home"/>
+                        <label> Home</label>
+                    </div>
+                    <div className="node option_link" onClick={() => history.push('/home')}>
+                        <label>{'>'}Stay Options</label>
+                    </div>
+                    <div className="node personal_link" onClick={() => history.push('/personalinfo', this.state.session)}>
+                        <label>{'>'}Personal Info</label>
+                    </div>
+                    <div className="node dring_link current">
+                        <label>{'>'}Drink Selection</label>
+                    </div>
+                </div>
                 <div className="service_title">
                     <p className="main_title">
                         Hello, <span>Jen</span>!
@@ -57,8 +73,8 @@ class DrinkSelection extends Component {
                     </div>
                 </div>
                 <div className="backnextbtn">
-                    <div className="btn backbutton" onClick={() => history.push('/PersonalInfo', this.state.session)}><img src={button_back} alt="Back button"/><p>Back</p></div>
-                    <div className="btn nextbutton" onClick={() => history.push('/LastScreen')}><img src={button_next} alt="Next button"/><p>Next</p></div>
+                    <div className="btn backbutton" onClick={() => history.push('/personalinfo', this.state.session)}><img src={button_back} alt="Back button"/><p>Back</p></div>
+                    <div className="btn nextbutton" onClick={() => history.push('/lastscreen')}><img src={button_next} alt="Next button"/><p>Next</p></div>
                 </div>
             </div>
         );

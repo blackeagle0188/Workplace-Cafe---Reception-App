@@ -13,7 +13,7 @@ class LastScreen extends Component {
                     <p className="sub_title">Wishing you a productive stay!</p>
                 </div>
                 <div className="backnextbtn">
-                    <div className="btn backbutton" onClick={() => history.push('/Home')}><img src={button_next} alt="Back button"/><p>Back</p></div>
+                    <div className="btn backbutton" onClick={() => history.push('/home')}><img src={button_next} alt="Back button"/><p>Back</p></div>
                 </div>
             </div>
         );

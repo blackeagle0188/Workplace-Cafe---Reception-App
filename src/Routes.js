@@ -16,12 +16,12 @@ export default class Routes extends Component {
             <Router history={history}>
                 <Switch>
                     <Route path="/" component={Welcome} exact />
-                    <Route path="/Home" component={Home} exact />
-                    <Route path="/PersonalInfo" component={PersonalInfo} exact />
-                    <Route path="/ConferenceRoom" component={ConferenceRoom} exact />
-                    <Route path="/DrinkSelection" component={DrinkSelection} exact />
-                    <Route path="/LastScreen" component={LastScreen} exact />
-                    <Route path="/Rating" component={Rating} exact />
+                    <Route path="/home" component={Home} exact />
+                    <Route path="/personalinfo" component={PersonalInfo} exact />
+                    <Route path="/conferenceroom" component={ConferenceRoom} exact />
+                    <Route path="/drinkselection" component={DrinkSelection} exact />
+                    <Route path="/lastscreen" component={LastScreen} exact />
+                    <Route path="/rating" component={Rating} exact />
                 </Switch>
             </Router>
         )

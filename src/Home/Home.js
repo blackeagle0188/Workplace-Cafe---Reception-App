@@ -11,13 +11,19 @@ import monthly from './../img/monthly_select.png';
 import monthly_hover from './../img/monthly_select_hover.png';
 import conference_rooms from './../img/conference_rooms.png';
 import conference_rooms_hover from './../img/conference_rooms_hover.png';
+import button_back from './../img/button_back.png';
+import button_next from './../img/alreadysignup.png';
 import stay from './../img/stayoptions.png';
 
 class Home extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {details: {addHourlyClass: false, addDailyClass: false, addMonthlyClass: false, addConfClass: false}}
+        this.state = {
+            details: {addHourlyClass: false, addDailyClass: false, addMonthlyClass: false, addConfClass: false}, 
+            session: this.props.location.state.customer_id,
+            clickedMonthly: false
+        }
     }
     toggleHourly() {
         this.setState({addHourlyClass: !this.state.addHourlyClass});
@@ -32,8 +38,11 @@ class Home extends Component {
         this.setState({addConfClass: !this.state.addConfClass});
     }
 
-    render() {
+    handleMonthly() {
+        this.setState({clickedMonthly: !this.state.clickedMonthly});
+    }
 
+    render() {
         let hourlyClass = ["hourly"];
         hourlyClass.push('first');
         if(this.state.addHourlyClass) {
@@ -80,7 +89,8 @@ class Home extends Component {
                 <div className="service_list">
                     <div className="container first">
                         <div className={hourlyClass.join(' ')} onMouseOver={this.toggleHourly.bind(this)} onMouseOut={this.toggleHourly.bind(this)}
-                        onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "HOURLY"})}>
+                        onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "DAILY", customer_id: this.state.session, signup: true})}>
+                            <div className="main">
                             <HoverImage src={hourly} hoverSrc ={hourly_hover} alt="hourly select"/>
                             <div className="content">
                                 <label className="hourly_text">HOURLY</label>
@@ -90,9 +100,11 @@ class Home extends Component {
                                 <img src={stay} alt="stay option"/>
                                 <p>P45 / hour</p>
                             </div>
+                            </div>
                         </div>
                         <div className={dailyClass.join(' ')} onMouseOver={this.toggleDaily.bind(this)} onMouseOut={this.toggleDaily.bind(this)}
-                        onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "DAILY"})}>
+                        onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "DAILY", customer_id: this.state.session, signup: true})}>
+                            <div className="main">
                             <HoverImage src={daily} hoverSrc={daily_hover} alt="daily select"/>
                             <div className="content">
                                 <label className="daily_text">DAILY</label>
@@ -102,23 +114,33 @@ class Home extends Component {
                                 <img src={stay} alt="stay option"/>
                                 <p>P320 / day</p>
                             </div>
+                            </div>
                         </div>
                     </div>
                     <div className="container">
                     <div className={monthlyClass.join(' ')} onMouseOver={this.toggleMonthly.bind(this)} onMouseOut={this.toggleMonthly.bind(this)}
-                        onClick={() => history.push('/PersonalInfo', {ipAddr: ipAddr, session: "MONTHLY"})}>
-                            <HoverImage src={monthly} hoverSrc={monthly_hover} alt="monthly select"/>
-                            <div className="content">
-                                <label className="monthly_text">MONTHLY</label>
-                                <label className="stay_text">STAY</label>
+                        onClick={() => this.handleMonthly()} style={this.state.clickedMonthly ? {paddingBottom:60} : {}}>
+                            <div className="main">
+                                <HoverImage src={monthly} hoverSrc={monthly_hover} alt="monthly select"/>
+                                <div className="content">
+                                    <label className="monthly_text">MONTHLY</label>
+                                    <label className="stay_text">STAY</label>
+                                </div>
+                                <div className="stay_option">
+                                    <img src={stay} alt="stay option"/>
+                                    <p>P5,000 / month</p>
+                                </div>
                             </div>
-                            <div className="stay_option">
-                                <img src={stay} alt="stay option"/>
-                                <p>P5,000 / month</p>
+                            { this.state.clickedMonthly ?
+                            <div className="sign_up">
+                                <div className="btn signin" onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "DAILY", customer_id: this.state.session, signup: false})}><img src={button_next} alt="Back button"/><p>Already registered</p></div>
+                                <div className="btn signup" onClick={() => history.push('/personalinfo', {ipAddr: ipAddr, session: "DAILY", customer_id: this.state.session, signup: true})}><img src={button_back} alt="Next button"/><p>Sign Up</p></div>
                             </div>
+                            : null }
                         </div>
                         <div className={conferenceClass.join(' ')} onMouseOver={this.toggleConference.bind(this)} onMouseOut={this.toggleConference.bind(this)}
-                        onClick={() => history.push('/conferenceroom')}>
+                        onClick={() => history.push('/conferenceroom', {customer_id: this.state.session})}>
+                            <div className="main">
                             <HoverImage src={conference_rooms} hoverSrc={conference_rooms_hover} alt="conference rooms"/>
                             <div className="content">
                                 <label className="conference_text">CONFERENCE</label>
@@ -127,6 +149,7 @@ class Home extends Component {
                             <div className="stay_option">
                                 <img src={stay} alt="stay option"/>
                                 <p>Prices Vary</p>
+                            </div>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,14 @@ import button_back from './../img/button_back.png';
 import history from './../history';
 
 class ConferenceRoom extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            customer_id: this.props.location.state.customer_id
+        }
+    }
+
     render() {
         return (
             <div className="conference_room">
@@ -13,7 +21,7 @@ class ConferenceRoom extends Component {
                         <img src={home} alt="Home"/>
                         <label> Home</label>
                     </div>
-                    <div className="node option_link" onClick={() => history.push('/home')}>
+                    <div className="node option_link" onClick={() => history.push('/home', {custmer_id: this.state.customer_id})}>
                         <label>{'>'}Stay Options</label>
                     </div>
                     <div className="node personal_link current">
@@ -85,7 +93,7 @@ class ConferenceRoom extends Component {
                     </div>
                 </div>
                 <div className="backnextbtn">
-                    <div className="btn backbutton" onClick={() => history.push('/home')}><img src={button_back} alt="Back button"/><p>Back</p></div>
+                    <div className="btn backbutton" onClick={() => history.push('/home', {custmer_id: this.state.customer_id})}><img src={button_back} alt="Back button"/><p>Back</p></div>
                 </div>
             </div>
         );

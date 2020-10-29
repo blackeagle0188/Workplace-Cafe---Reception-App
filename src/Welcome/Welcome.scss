@@ -29,6 +29,16 @@
   }
 }
 
+.setting_ico {
+  position: absolute;
+  left: 10%;
+  top: 2%;
+  cursor: pointer;
+  img {
+    width: 40px;
+  }
+}
+
 .breadcrumb {
   display: flex;
   padding-top: 7vh;

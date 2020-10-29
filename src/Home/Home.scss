@@ -52,20 +52,12 @@ label {
         }
         justify-content: center;
         .hourly, .daily, .monthly, .conference {
-            cursor: pointer;
-            &.entered {
-                .content {
-                    label {
-                        color: #ffffff;
-                    }
-                }
-            }
             @media (max-width: 450px) {
                 padding: 10px 0 10px 0;
             }
-            position: relative;
             &.first {
                 padding-right: 56px;
+                position: relative;
                 @media (max-width: 798px) {
                     padding-right: 20px;
                 }
@@ -73,67 +65,62 @@ label {
                     padding-right: 0;
                 }
             }
-            &>img {
-                box-shadow: 0 0 30px rgba(0, 0, 0, 0.13);
-                border-radius: 10px;
-                @media (max-width: 798px) {
-                    width: 100%;
+            cursor: pointer;
+            &.entered {
+                .main {
+                    .content {
+                        label {
+                            color: #ffffff;
+                        }
+                    }
                 }
             }
-            .content {
-                .hourly_text, .daily_text, .monthly_text, .conference_text {
-                    font-family: 'Poppins-Bold';
-                    font-size: 36px;
+            .main {
+                position: relative;
+                &>img {
+                    box-shadow: 0 0 30px rgba(0, 0, 0, 0.13);
+                    border-radius: 10px;
                     @media (max-width: 798px) {
-                        font-size: 30px;
+                        width: 100%;
                     }
-                    @media (max-width: 600px) {
-                        font-size: 25px;
-                    }
-                    @media (max-width: 450px) {
+                }
+                .content {
+                    .hourly_text, .daily_text, .monthly_text, .conference_text {
+                        font-family: 'Poppins-Bold';
                         font-size: 36px;
+                        @media (max-width: 798px) {
+                            font-size: 30px;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 25px;
+                        }
+                        @media (max-width: 450px) {
+                            font-size: 36px;
+                        }
+                        color:#707070;
+                        position: absolute;
+                        left: 5%;
+                        top: 7%;
                     }
-                    color:#707070;
-                    position: absolute;
-                    left: 5%;
-                    top: 7%;
-                }
-                .stay_text {
-                    font-family: 'Poppins-Bold';
-                    font-size: 36px;
-                    @media (max-width: 798px) {
-                        font-size: 30px;
-                    }
-                    @media (max-width: 600px) {
-                        font-size: 25px;
-                    }
-                    @media (max-width: 450px) {
+                    .stay_text {
+                        font-family: 'Poppins-Bold';
                         font-size: 36px;
+                        @media (max-width: 798px) {
+                            font-size: 30px;
+                        }
+                        @media (max-width: 600px) {
+                            font-size: 25px;
+                        }
+                        @media (max-width: 450px) {
+                            font-size: 36px;
+                        }
+                        color:#707070;
+                        position: absolute;
+                        left: 5%;
+                        top: 27%;
                     }
-                    color:#707070;
-                    position: absolute;
-                    left: 5%;
-                    top: 27%;
                 }
-            }
-            .stay_option {
-                width: 140px;
-                @media (max-width: 798px) {
-                    width: 100px;
-                }
-                @media (max-width: 450px) {
-                    width: 140px;
-                }
-                display: flex;
-                align-items: center;
-                top: 60%;
-                left: 5%;
-                @media (max-width: 450px) {
-                    justify-content: center;
-                }
-                position: absolute;
-                pointer-events: none;
-                img {
+                .stay_option {
                     width: 140px;
                     @media (max-width: 798px) {
                         width: 100px;
@@ -141,20 +128,81 @@ label {
                     @media (max-width: 450px) {
                         width: 140px;
                     }
-                }
-                p {
-                    font-size: 16px;
-                    @media (max-width: 798px) {
-                        font-size: 12px;
-                    }
+                    display: flex;
+                    align-items: center;
+                    top: 60%;
+                    left: 5%;
                     @media (max-width: 450px) {
-                        font-size: 16px;
+                        justify-content: center;
                     }
-                    font-family: 'Poppins-Medium';
-                    color: #ffffff;
                     position: absolute;
-                    width: 100%;
-                    text-align: center;
+                    pointer-events: none;
+                    img {
+                        width: 140px;
+                        @media (max-width: 798px) {
+                            width: 100px;
+                        }
+                        @media (max-width: 450px) {
+                            width: 140px;
+                        }
+                    }
+                    p {
+                        font-size: 16px;
+                        @media (max-width: 798px) {
+                            font-size: 12px;
+                        }
+                        @media (max-width: 450px) {
+                            font-size: 16px;
+                        }
+                        font-family: 'Poppins-Medium';
+                        color: #ffffff;
+                        position: absolute;
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .sign_up {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        @media (max-width: 798px) {
+            width: 100%;
+            justify-content: center;
+        }
+        .btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 18px;
+            cursor: pointer;
+            img {
+                height: 35px;
+                // @media (max-width: 600px) {
+                //     height: 50px;
+                // }
+                // @media (max-width: 450px) {
+                //     height: 40px;
+                // }
+            }
+            p {
+                font-size: 12px;
+                font-family: 'Poppins-Medium';
+                position: absolute;
+            }
+            &.signin {
+                padding-right: 13px;
+                p {
+                    color: #ffffff;
+                }
+            }
+            &.signup {
+                padding-right: 13px;
+                p {
+                    color: #F27A2D;
                 }
             }
         }

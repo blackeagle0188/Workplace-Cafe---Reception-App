@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from "axios";
 import "./Rating.scss";
 import seconds from './../img/seconds.png';
 import rating1 from './../img/btn-ico-rating-1.png';
@@ -13,7 +14,46 @@ class Rating extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrSelect: []
+            customer_id: 0,
+            arrSelect: [],
+            seconds: localStorage.getItem('timer2')
+        }
+        this.timer = 0;
+        this.countDown = this.countDown.bind(this);
+    }
+
+    componentDidMount() {
+        let arr = [];
+        for (let i = 0; i < 5; i++) {
+            arr.push(false);
+        }
+        arr[4] = true;
+        this.setState({arrSelect: arr});
+        this.startTimer();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer);
+    }
+
+    startTimer() {
+        console.log(1);
+        if (this.timer == 0 && this.state.seconds > 0) {
+          this.timer = setInterval(this.countDown, 1000);
+        }
+    }
+    
+    countDown() {
+        // Remove one second, set state so a re-render happens.
+        let seconds = this.state.seconds - 1;
+        this.setState({
+            seconds: seconds,
+        });
+        
+        // Check if we're at zero.
+        if (seconds == 0) { 
+            clearInterval(this.timer);
+            this.handleClickNext();
         }
     }
 
@@ -67,12 +107,31 @@ class Rating extends Component {
         this.setState({arrSelect: arr});
     }
 
+    handleClickNext() {
+        let rating = 1;
+        for (let i = 0; i < 5; i++) {
+            if (this.state.arrSelect[i]) {
+                rating = i + 1;
+                break;
+            }
+        }
+        let url = "http://" + (localStorage.getItem('ipaddr') ? localStorage.getItem('ipaddr') : '159.65.1.49') + "/workplace/app/check-checkout";
+        axios.post(url, {
+            rating: rating
+        })
+        .then(res => {
+            console.log(res);
+            const result = res.data;
+            history.push('/');
+        })
+    }
+
     render() {
         return (
             <div className="Rating">
                 <div className="seconds">
                     <img src={seconds} alt="Seconds"/>
-                    <p className="seconds_text">12<br/><span>seconds</span></p>
+                    <p className="seconds_text">{ this.state.seconds }<br/><span>seconds</span></p>
                 </div>
                 <div className="rate_text">
                     <p className="title">Glad to be working with you.</p>
@@ -86,7 +145,7 @@ class Rating extends Component {
                     <img src={rating5} alt="Rating 5" className={this.state.arrSelect[4]?"selected":""} onClick={this.handleClick4.bind(this)}/>
                 </div>
                 <div className="backnextbtn">
-                    <div className="btn backbutton" onClick={() => history.push('/home')}><img src={button_next} alt="Back button"/><p>Submit</p></div>
+                    <div className="btn backbutton" onClick={this.handleClickNext.bind(this)}><img src={button_next} alt="Back button"/><p>Submit</p></div>
                 </div>
             </div>
         );

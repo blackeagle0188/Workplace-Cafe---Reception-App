@@ -53,15 +53,18 @@ p {
     .rate_icons {
         text-align: center;
         padding-top: 76px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @media (max-width: 600px) {
-            display: flex;
             justify-content: space-evenly;
             padding-top: 30px;
             align-items: center;
         }
         img {
             width: 99px;
-            padding: 10px 23px 10px 23px;
+            margin: 10px 23px 10px 23px;
             @media (max-width: 600px) {
                 width: 55px;
                 padding: 0;
@@ -72,7 +75,7 @@ p {
             }
             &.selected {
                 border: 10px solid rgba(255, 255, 255, 0.1);
-                border-radius: 40px;
+                border-radius: 60px;
             }
         }
     }

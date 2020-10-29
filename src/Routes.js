@@ -8,6 +8,7 @@ import ConferenceRoom from "./ConferenceRoom/ConferenceRoom";
 import DrinkSelection from "./DrinkSelection/DrinkSelection";
 import LastScreen from "./LastScreen/LastScreen";
 import Rating from "./Rating/Rating";
+import Setting from "./Setting/Setting";
 import history from './history';
 
 export default class Routes extends Component {
@@ -22,6 +23,7 @@ export default class Routes extends Component {
                     <Route path="/drinkselection" component={DrinkSelection} exact />
                     <Route path="/lastscreen" component={LastScreen} exact />
                     <Route path="/rating" component={Rating} exact />
+                    <Route path="/setting" component={Setting} exact />
                 </Switch>
             </Router>
         )

@@ -1,0 +1,125 @@
+label {
+  pointer-events: none;
+}
+
+.setting {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 80px 0 80px;
+  @media (max-width: 600px) {
+      padding: 0 15% 0 15%;
+  }
+  .settingpos {
+    padding: 5% 10% 5% 10%;
+    @media (max-width: 700px) {
+      padding: 0;
+      padding-top: 10%;
+    }
+    .ip_config, .last_to_home, .rating_to_home, .duration {
+      padding: 35px 0 0 0;
+      display: flex;
+      align-items: center;
+      @media (max-width: 460px) {
+        display: block;
+      }
+       @media (max-width: 600px) {
+          width: 100%;
+      }
+      label {
+          font-size: 20px;
+          padding-right: 30px;
+          @media (max-width: 600px) {
+              font-size: 15px;
+          }
+          font-family: 'Poppins-Regular';
+          color: #707070;
+          width: 100px;
+      }
+      span {
+        font-size: 10px;
+        font-family: 'Poppins-SemiBold';
+        color: #897372;
+      }
+      div {
+          padding-top: 9px;
+          .ip_address, .last_timer_input, .rating_timer_input, .duration_input {
+              background-color: #f4f4f4;
+              border: none;
+              width: 300px;
+              @media (max-width: 600px) {
+                  width: 100%;
+              }
+              height: 56px;
+              font-size: 20px;
+              border-radius: 10px;
+          }
+      }
+    }
+  }
+  .nextbackbtnpos {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 798px) {
+        padding: 30px 0 30px 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img {
+            height: 60px;
+            @media (max-width: 600px) {
+                height: 50px;
+            }
+            @media (max-width: 450px) {
+                height: 40px;
+            }
+        }
+        p {
+            font-size: 24px;
+            @media (max-width: 600px) {
+                font-size: 20px;
+            }
+            @media (max-width: 450px) {
+                font-size: 18px;
+            }
+            font-family: 'Poppins-Medium';
+            position: absolute;
+        }
+        &.backbutton {
+            padding-right: 13px;
+            p {
+                color: #F27A2D;
+            }
+        }
+        &.nextbutton {
+            padding-right: 13px;
+            p {
+                color: #ffffff;
+            }
+        }
+    }
+  }
+}
+
+.setting {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .savebutton {
+    background-image: url("./../img/backhome.png");
+    position: absolute;
+    top: 65%;
+    left:40%;
+    width: 159px;
+    height: 60px;
+  }

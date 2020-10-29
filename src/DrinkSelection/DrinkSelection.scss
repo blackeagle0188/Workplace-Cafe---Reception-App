@@ -59,12 +59,19 @@ p {
             }
             padding-right: 41px;
             .select {
+                cursor: pointer;
                 width: 250px;
                 height: 98px;
                 @media (max-width: 600px) {
                     height: 55px;
                 }
                 background:#ffffff;
+                &.selected {
+                    background:#5C3E3C;
+                    p {
+                        color: #ffffff;
+                    }
+                }
                 margin: auto;
                 border-radius: 10px;
                 box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);

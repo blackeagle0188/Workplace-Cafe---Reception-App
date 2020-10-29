@@ -116,17 +116,24 @@ label {
             }
         }
         .btn_prod {
-            background-color: #5c3e3c;
-            border: none;
-            color: #ffffff;
+            outline: none;
+            background-color: white;
+            border-color: #5c3e3c;
+            border-width: 1px;
+            color: #707070;
             border-bottom-left-radius: 5px;
             border-top-left-radius: 5px;
             @media (max-width: 450px) {
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 5px;
             }
+            &.selected {
+                background-color: #5c3e3c;
+                color: #ffffff;
+            }
         }
         .btn_access {
+            outline: none;
             background-color: white;
             border-color: #5c3e3c;
             border-width: 1px;
@@ -137,9 +144,13 @@ label {
                 border-top-right-radius: 0px;
                 border-bottom-left-radius: 5px;
             }
+            &.selected {
+                background-color: #5c3e3c;
+                color: #ffffff;
+            }
         }
     }
-    .card_no_title {
+    .card_no_title, .email_title {
         font-size: 20px;
         @media (max-width: 450px) {
             font-size: 15px;
@@ -150,14 +161,14 @@ label {
         padding: 50px 0 6px 0;
     }
     
-    .card_no {
+    .card_no, .email {
         display: flex;
         @media (max-width: 600px) {
             display: block;
         }
         width: 100%;
         align-items: center;
-        .input_card_no {
+        .input_card_no, .input_email {
             background-color: #f4f4f4;
             border: none;
             width: 300px;

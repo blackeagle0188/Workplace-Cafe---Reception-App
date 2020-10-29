@@ -9,10 +9,32 @@ p {
 .LastScreen {
     background-color: #5C3E3C;
     height: 100vh;
+    .seconds {
+        padding-top: 15vh;
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 114px;
+        }
+        .seconds_text {
+            font-size: 30px;
+            font-family: 'Poppins-Bold';
+            color: #ffffff;
+            line-height: 0.5;
+            position: absolute;
+            span {
+                font-size: 10px;
+                font-family: 'Poppins-Medium';
+            }
+        }
+    }
     .conculsion{
         text-align: center;
         color: #ffffff;
-        padding-top: 30vh;
+        padding-top: 5vh;
         @media (max-width: 600px) {
             padding-top: 20vh;
         }
